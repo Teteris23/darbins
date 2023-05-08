@@ -1,38 +1,29 @@
-function checkAnswer() {
+
+  function checkAnswers() {
     const answer1 = document.querySelector('input[name="question-1-answers"]:checked');
-    if (!answer1) {
-      alert("Lūdzu, izvēlieties atbildi.");
-      return;
-    }
-    if (answer1.value === "b") {
-      document.getElementById("result").textContent = "Pareizi!";
-    } else {
-      document.getElementById("result").textContent = "Diemžēl nav pareizi.";
-    }
-  }
-
-  function checkAnswer() {
     const answer2 = document.querySelector('input[name="question-2-answers"]:checked');
-    if (!answer2) {
-      alert("Lūdzu, izvēlieties atbildi.");
-      return;
-    }
-    if (answer2.value === "a") {
-      document.getElementById("result").textContent = "Pareizi!";
-    } else {
-      document.getElementById("result").textContent = "Diemžēl nav pareizi.";
-    }
-  }
-
-  function checkAnswer() {
     const answer3 = document.querySelector('input[name="question-3-answers"]:checked');
-    if (!answer3) {
-      alert("Lūdzu, izvēlieties atbildi.");
+  
+    if (!answer1 || !answer2 || !answer3) {
+      alert("Lūdzu, atbildiet uz visiem jautājumiem.");
       return;
     }
-    if (answer3.value === "b") {
-      document.getElementById("result").textContent = "Pareizi!";
-    } else {
-      document.getElementById("result").textContent = "Diemžēl nav pareizi.";
+  
+    let correctAnswers = 0;
+  
+    if (answer1.value === "b") {
+      correctAnswers++;
     }
+  
+    if (answer2.value === "a") {
+      correctAnswers++;
+    }
+  
+    if (answer3.value === "b") {
+      correctAnswers++;
+    }
+  
+    const percentageCorrect = Math.round(correctAnswers / 3 * 100);
+  
+    document.getElementById("result").textContent = `Jūs atbildējāt pareizi uz ${correctAnswers} no 3 jautājumiem (${percentageCorrect}%).`;
   }

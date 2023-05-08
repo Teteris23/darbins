@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+    
+</head>
+<body>
+    <div id="quiz-container">
+        <h1>Testa uzdevums</h1>
+        <form id="quiz" onsubmit="return false;">
+            <div class="question">
+                <h2>1. Kādas ir datubāzes galvenās funkcijas?</h2>
+                <label>
+                  <input type="radio" name="question-1-answers" value="a" />
+                  Datu ievade un izvade
+                </label>
+                <label>
+                  <input type="radio" name="question-1-answers" value="b" />
+                  Datu glabāšana un organizēšana
+                </label>
+                <label>
+                  <input type="radio" name="question-1-answers" value="c" />
+                  Datu pārsūtīšana pa tīklu
+                </label>
+                <label>
+                  <input type="radio" name="question-1-answers" value="d" />
+                  Datu izpilde un atbildes sagatavošana
+                </label>
+              </div>
+      
+              <div class="question">
+                <h2>2. Kāda ir problēmas analīzes galvenā mērķa?</h2>
+                <label>
+                  <input type="radio" name="question-2-answers" value="a" />
+                  Atrisināt problēmas simptomus
+                </label>
+                <label>
+                  <input type="radio" name="question-2-answers" value="b" />
+                  Noteikt problēmas cēloņus
+                </label>
+                <label>
+                  <input type="radio" name="question-2-answers" value="c" />
+                  Veikt uzlabojumus problēmas risināšanai
+                </label>
+                <label>
+                  <input type="radio" name="question-2-answers" value="d" />
+                  Konsultēt citus speciālistus
+                </label>
+              </div>
+      
+              <div class="question">
+                <h2>3. Kas ir OOP?</h2>
+                <label>
+                  <input type="radio" name="question-3-answers" value="a" />
+                  Objektu organizācijas process
+                </label>
+                <label>
+                  <input type="radio" name="question-3-answers" value="b" />
+                  Objektu orientēta programmēšana
+                </label>
+                <label>
+                  <input type="radio" name="question-3-answers" value="c" />
+                  Objektu optimizācijas princips
+                </label>
+                <label>
+                  <input type="radio" name="question-3-answers" value="d" />
+                  Objektu operatoru paradigma
+                </label>
+              </div>
+
+          
+          <button type="submit" onclick="checkAnswer()">Pārbaudīt atbildi</button>
+          <p id="result"></p>
+        </form>
+      </div>
+  
+</body>
+</html>

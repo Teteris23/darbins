@@ -15,7 +15,7 @@ function checkAnswers() {
   const answer14 = document.querySelector('input[name="question-14-answers"]:checked');
   const answer15 = document.querySelector('input[name="question-15-answers"]:checked');
 
-  if (!answer1 || !answer2 || !answer3) {
+  if (!answer1 || !answer2 || !answer3 || !answer4 || !answer5 || !answer6 || !answer7 || !answer8 || !answer9 || !answer10 || !answer11 || !answer12 || !answer13 || !answer14 || !answer15) {
     alert("Lūdzu, atbildiet uz visiem jautājumiem.");
     return;
   }
